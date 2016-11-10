@@ -7,8 +7,7 @@ var Result = React.createClass({
 			<div className="panel panel-primary">
 				<div className="panel-heading">Result</div>
 				<div className="panel-body">
-					Database content here.
-					
+					{this.props.renderResults()}
 				</div>
 			</div>
 		)

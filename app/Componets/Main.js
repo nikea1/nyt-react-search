@@ -55,7 +55,17 @@ var Main = React.createClass({
 		})
 	},
 	
-	
+	renderResults:function(){
+		return this.state.query.map(function(data, index){
+			return(
+				<div key={index} data-time={data.date}>
+					<h2>{data.title}</h2>
+					<p>{data.url}</p>
+					<button className="btn btn-danger">Save</button>
+				</div>
+			)
+		})
+	},
 
 	render:function(){
 		return(
@@ -66,7 +76,7 @@ var Main = React.createClass({
 				</div>
 		
 				<Search myfunc={this.getQuery}  />
-				<Result />
+				<Result renderResults={this.renderResults}/>
 				<Saved />
 			</div>
 		)
