@@ -34,7 +34,7 @@ var Search = React.createClass({
 
 							<label>Start Year</label>
 							<input type="date" id="start" className="form-control" 
-									value={this.state.start} onChange={this.handleChange} required />
+									value={this.state.start} onChange={this.handleChange} />
 								
 							<label>End Year</label>
 							<input type="date" id="end" className="form-control"  
